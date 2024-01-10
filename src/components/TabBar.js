@@ -14,7 +14,6 @@ const TabBar = () => {
   const navigate = useNavigate();
   const [index, setIndex] = useState(0);
   const images = [home, scan, history, menu];
-  const icons = [homeOne, scanOne, historyOne, menuOne];
 
   const handleClick = (ind) => {
     if (images[ind] == scan) {
@@ -39,7 +38,7 @@ const TabBar = () => {
               handleClick(ind);
             }}
           >
-            {<img src={icons[ind]} />}
+            {<img src={icon} />}
           </div>
         );
       })}
