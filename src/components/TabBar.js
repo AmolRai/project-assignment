@@ -14,7 +14,7 @@ const TabBar = () => {
   const navigate = useNavigate();
   const [index, setIndex] = useState(0);
   const images = [home, scan, history, menu];
-  const icons = [homeOne, scanOne, historyOne, menuOne];
+  const icons = [homeOne, homeOne, homeOne, homeOne];
 
   const handleClick = (ind) => {
     if (images[ind] == scan) {
