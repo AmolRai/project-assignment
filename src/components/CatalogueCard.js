@@ -3,7 +3,10 @@ import styles from "../styles/catalogueCard.module.css";
 const CatalogueCard = ({ icon, name, debt, price }) => {
   return (
     <div className={styles.calalogueCard}>
-      <div className={styles.cal} style={{ marginTop: "1rem" }}>
+      <div
+        className={styles.cal}
+        style={{ marginTop: "1rem", justifyContent: "space-between" }}
+      >
         <div
           className={styles.cal}
           style={{
