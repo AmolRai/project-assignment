@@ -1,5 +1,9 @@
 .cardDetail {
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .card {
@@ -58,7 +62,7 @@
   background-color: #1c2641;
   margin-left: 0 !important;
   margin-top: 1.5rem;
-  height: 13rem;
+  height: 19rem;
   overflow: auto;
 }
 
