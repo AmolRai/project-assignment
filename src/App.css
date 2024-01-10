@@ -7,7 +7,7 @@
 
 .app {
   height: 100vh;
-  width: 31.5rem;
+  width: 25rem;
   margin: auto;
   background: linear-gradient(11deg, #1a2440 1.16%, #313c5c 100.88%);
   display: flex;
@@ -23,7 +23,7 @@
 
 .line {
   background-color: #202b48;
-  width: 27rem;
+  width: 20rem;
   height: 1px;
   align-self: flex-end;
 }

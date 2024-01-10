@@ -15,29 +15,46 @@ const CardDetail = () => {
 
   return (
     <div className={styles.cardDetail}>
-      <div style={{ marginLeft: "1.5rem" }}>
+      <div>
         <img
+          style={{ marginLeft: "1.5rem" }}
           className={styles.arrow}
           src={arrow}
           onClick={() => window.history.back()}
         />
-        <h1>Salary Card</h1>
+        <h1 style={{ marginLeft: "1.5rem" }}>Salary Card</h1>
         {cardClick && (
-          <img
-            onClick={() => setCardClick(false)}
-            className={styles.card}
-            src={card}
-          />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <img
+              onClick={() => setCardClick(false)}
+              className={styles.card}
+              src={card}
+            />
+          </div>
         )}
         {!cardClick && (
-          <img
-            onClick={() => setCardClick(true)}
-            className={styles.card}
-            src={backSideCard}
-          />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <img
+              onClick={() => setCardClick(true)}
+              className={styles.card}
+              src={backSideCard}
+            />
+          </div>
         )}
         <div className={styles.share}>
-          <div>
+          <div style={{ marginLeft: "1.5rem" }}>
             <h2>Balance</h2>
             <p>$2,748.00</p>
           </div>
