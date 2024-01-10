@@ -4,6 +4,7 @@ import firstCard from "../assets/card-one.svg";
 import secondCard from "../assets/card-two.svg";
 import { useNavigate } from "react-router-dom";
 import { useState, useRef } from "react";
+import { useSpring, animated } from "react-spring";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -33,6 +34,11 @@ const Home = () => {
     }
   };
 
+  const props = useSpring({
+    transform: "rotate(0deg)",
+    from: { transform: "rotate(90deg)" },
+  });
+
   return (
     <div className={styles.home}>
       <div>
@@ -48,14 +54,24 @@ const Home = () => {
         </div>
         <div className={styles.card} ref={cardContainerRef}>
           <div className={styles.cards}>
-            <img
+            {/* <img
               src={firstCard}
               onClick={() => navigate("/cardDetail")}
+              alt="First Card"
+            /> */}
+            <animated.img
+              onClick={() => navigate("/cardDetail")}
+              style={props}
+              src={firstCard}
               alt="First Card"
             />
           </div>
           <div className={styles.cards}>
-            <img src={secondCard} alt="Second Card" />
+            <img
+              src={secondCard}
+              onClick={() => navigate("/cardDetail")}
+              alt="Second Card"
+            />
           </div>
         </div>
         <div className={styles.lines}>

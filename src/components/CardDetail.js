@@ -9,9 +9,15 @@ import share from "../assets/share.svg";
 import music from "../assets/music.svg";
 import car from "../assets/car.svg";
 import backSideCard from "../assets/backSideCard.svg";
+import { useSpring, animated } from "react-spring";
 
 const CardDetail = () => {
   const [cardClick, setCardClick] = useState(true);
+
+  const props = useSpring({
+    transform: "rotate(0deg)",
+    from: { transform: "rotate(90deg)" },
+  });
 
   return (
     <div className={styles.cardDetail}>
@@ -31,10 +37,17 @@ const CardDetail = () => {
               justifyContent: "center",
             }}
           >
-            <img
+            {/* <img
               onClick={() => setCardClick(false)}
               className={styles.card}
               src={card}
+            /> */}
+            <animated.img
+              style={props}
+              className={styles.card}
+              src={card}
+              onClick={() => setCardClick(false)}
+              alt="Back Credit Card Image"
             />
           </div>
         )}
