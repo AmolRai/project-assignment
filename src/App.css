@@ -5,6 +5,10 @@
   font-family: sans-serif;
 }
 
+body {
+  background-color: #1a2440;
+}
+
 .app {
   height: 100vh;
   width: 26rem;
