@@ -1,0 +1,74 @@
+.cardDetail {
+  color: white;
+}
+
+.card {
+  margin-top: 10px;
+  width: 28rem;
+  cursor: pointer;
+}
+
+.arrow {
+  margin-top: 3.5rem;
+  cursor: pointer;
+}
+
+.cardDetail h1 {
+  width: 8rem;
+  font-size: 32px;
+  line-height: 41px;
+  letter-spacing: 0.374px;
+  margin-top: 1rem;
+}
+
+.cardDetail h2 {
+  color: #94a3d3;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.3px;
+  font-size: 16px;
+  color: #94a3d3;
+}
+
+.share {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardDetail p {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+}
+
+.imgBg {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 16px 20px;
+}
+
+/* Transactions */
+
+.transactions {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #1c2641;
+  margin-left: 0 !important;
+  margin-top: 1.5rem;
+  height: 13rem;
+  overflow: auto;
+}
+
+.transactions h3 {
+  margin-left: 1.5rem;
+}
+
+.line {
+  background-color: #202b48;
+  background-color: red;
+  width: 301px;
+  height: 1px;
+}

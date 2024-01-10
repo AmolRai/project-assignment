@@ -1,0 +1,50 @@
+.home {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bankDetails {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.bankCardTitle {
+  margin-top: 3rem;
+  margin-left: 1.5rem;
+  color: white;
+}
+
+.bankCardTitle h1 {
+  letter-spacing: 0.374px;
+  width: 7rem;
+}
+
+.bankCardTitle h2 {
+  color: #94a3d3;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.3px;
+  font-size: 16px;
+  color: #94a3d3;
+}
+
+.bankCardTitle p {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.cards img {
+  width: 14rem;
+}

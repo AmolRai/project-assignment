@@ -1,0 +1,28 @@
+.tabBar {
+  background: linear-gradient(
+    9deg,
+    rgba(19, 27, 49, 0.92) 21.76%,
+    rgba(47, 57, 91, 0.92) 97.66%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  height: 6rem;
+}
+
+.tabBar img {
+  cursor: pointer;
+}
+
+.customBackground {
+  background: linear-gradient(to bottom left, #5d9eff, #7751fd);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+svg {
+  color: red;
+}

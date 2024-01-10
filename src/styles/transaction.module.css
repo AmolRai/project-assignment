@@ -1,0 +1,40 @@
+.transaction {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.transactionCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin: 10px;
+}
+
+.transactionDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transactionType {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.3px;
+  font-size: 16px !important;
+}
+
+.transactionCard span {
+  color: #94a3d3;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.line {
+  background-color: #202b48;
+  width: 27rem;
+  height: 1px;
+  align-self: flex-end;
+}
