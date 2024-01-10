@@ -62,7 +62,7 @@
   background-color: #1c2641;
   margin-left: 0 !important;
   margin-top: 1.5rem;
-  height: 19rem;
+  /* height: 19rem; */
   overflow: auto;
 }
 
@@ -75,4 +75,13 @@
   background-color: red;
   width: 301px;
   height: 1px;
+}
+
+.tool {
+  background-color: #2d3757;
+  width: 45px;
+  height: 4px;
+  margin: auto;
+  margin-top: 1rem;
+  border-radius: 1rem;
 }

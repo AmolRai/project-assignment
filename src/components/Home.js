@@ -54,11 +54,6 @@ const Home = () => {
         </div>
         <div className={styles.card} ref={cardContainerRef}>
           <div className={styles.cards}>
-            {/* <img
-              src={firstCard}
-              onClick={() => navigate("/cardDetail")}
-              alt="First Card"
-            /> */}
             <animated.img
               onClick={() => navigate("/cardDetail")}
               style={props}

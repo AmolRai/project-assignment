@@ -5,11 +5,9 @@ import arrow from "../assets/arrow.svg";
 import card from "../assets/card-three.svg";
 import shareOne from "../assets/share-one.svg";
 import shareTwo from "../assets/share-two.svg";
-import share from "../assets/share.svg";
-import music from "../assets/music.svg";
-import car from "../assets/car.svg";
 import backSideCard from "../assets/backSideCard.svg";
 import { useSpring, animated } from "react-spring";
+import { data } from "../utils/mockData";
 
 const CardDetail = () => {
   const [cardClick, setCardClick] = useState(true);
@@ -18,39 +16,6 @@ const CardDetail = () => {
     transform: "rotate(0deg)",
     from: { transform: "rotate(90deg)" },
   });
-
-  const cardDetailData = [
-    {
-      icon: share,
-      type: "Card to Card",
-      name: "Maria",
-    },
-    {
-      icon: music,
-      type: "Apply Music",
-      name: "Online",
-    },
-    {
-      icon: car,
-      type: "Uber",
-      name: "Service",
-    },
-    {
-      icon: share,
-      type: "Card to Card",
-      name: "Maria",
-    },
-    {
-      icon: music,
-      type: "Apply Music",
-      name: "Online",
-    },
-    {
-      icon: car,
-      type: "Uber",
-      name: "Service",
-    },
-  ];
 
   return (
     <div className={styles.cardDetail}>
@@ -70,11 +35,6 @@ const CardDetail = () => {
               justifyContent: "center",
             }}
           >
-            {/* <img
-              onClick={() => setCardClick(false)}
-              className={styles.card}
-              src={card}
-            /> */}
             <animated.img
               style={props}
               className={styles.card}
@@ -115,20 +75,11 @@ const CardDetail = () => {
         </div>
       </div>
       <div className={styles.transactions}>
-        <div
-          style={{
-            backgroundColor: "#2D3757",
-            width: "45px",
-            height: "4px",
-            margin: "auto",
-            marginTop: "1rem",
-            borderRadius: "1rem",
-          }}
-        ></div>
+        <div className={styles.tool}></div>
         <h3 style={{ paddingTop: "2rem" }}>Today</h3>
-        {cardDetailData.map((data) => {
+        {data.map((data) => {
           return (
-            <div>
+            <div key={data.id}>
               <TransactionCard
                 icon={data.icon}
                 type={data.type}
