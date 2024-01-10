@@ -3,7 +3,7 @@ import ellipse from "../assets/ellipse-one.svg";
 import firstCard from "../assets/card-one.svg";
 import secondCard from "../assets/card-two.svg";
 import { useNavigate } from "react-router-dom";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 
 const Home = () => {
