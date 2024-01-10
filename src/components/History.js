@@ -29,6 +29,7 @@ const History = () => {
               icon={data.icon}
               type={data.type}
               name={data.name}
+              price={data.price}
               detail={false}
             />
           </div>

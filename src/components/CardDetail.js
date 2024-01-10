@@ -75,6 +75,7 @@ const CardDetail = () => {
                 icon={data.icon}
                 type={data.type}
                 name={data.name}
+                price={data.price}
                 detail={true}
               />
             </div>

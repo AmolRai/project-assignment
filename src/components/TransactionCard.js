@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "../styles/transaction.module.css";
 
-const TransactionCard = ({ icon, type, name, detail }) => {
+const TransactionCard = ({ icon, type, name, price, detail }) => {
   const [showInfo, setShowInfo] = useState(false);
 
   return (
@@ -26,8 +26,14 @@ const TransactionCard = ({ icon, type, name, detail }) => {
           </div>
         </div>
         <div className={styles.transactionType}>
-          <h3 style={{ marginRight: "2rem", marginBottom: "1rem" }}>
-            + $143.00
+          <h3
+            style={{
+              marginRight: "2rem",
+              marginBottom: "1rem",
+              fontSize: "16px",
+            }}
+          >
+            {price}
           </h3>
         </div>
       </div>
