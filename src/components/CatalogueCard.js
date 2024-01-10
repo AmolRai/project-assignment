@@ -4,7 +4,7 @@ const CatalogueCard = ({ icon, name, debt, price }) => {
   return (
     <div
       className="calalogueCard"
-      style={{ display: "flex", flexDirection: "column" }}
+      style={{ display: "flex", flexDirection: "column", width: "100vw" }}
     >
       <div
         style={{

@@ -90,7 +90,6 @@ const Catalogue = () => {
             style={{
               display: "flex",
               alignItems: "center",
-              // width: "100%",
             }}
           >
             <CatalogueCard
