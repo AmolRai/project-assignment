@@ -4,8 +4,43 @@ import share from "../assets/share.svg";
 import music from "../assets/music.svg";
 import car from "../assets/car.svg";
 import ellipse from "../assets/ellipse-one.svg";
+import { useNavigate } from "react-router-dom";
 
 const History = () => {
+  const navigate = useNavigate();
+  const historyData = [
+    {
+      icon: share,
+      type: "Card to Card",
+      name: "Maria",
+    },
+    {
+      icon: music,
+      type: "Apply Music",
+      name: "Online",
+    },
+    {
+      icon: car,
+      type: "Uber",
+      name: "Service",
+    },
+    {
+      icon: share,
+      type: "Card to Card",
+      name: "Maria",
+    },
+    {
+      icon: music,
+      type: "Apply Music",
+      name: "Online",
+    },
+    {
+      icon: car,
+      type: "Uber",
+      name: "Service",
+    },
+  ];
+
   return (
     <div style={{ color: "white", marginTop: "3rem" }}>
       <div
@@ -21,12 +56,18 @@ const History = () => {
         </div>
       </div>
       <h3 style={{ paddingTop: "2rem", marginLeft: "1.5rem" }}>20 April</h3>
-      <TransactionCard icon={share} type="Card to card" name="Maria" />
-      <TransactionCard icon={music} type="Apple Music" name="Online" />
-      <TransactionCard icon={car} type="Uber" name="Service" />
-      <TransactionCard icon={share} type="Card to card" name="Maria" />
-      <TransactionCard icon={music} type="Apple Music" name="Online" />
-      <TransactionCard icon={car} type="Uber" name="Service" />
+      {historyData.map((data) => {
+        return (
+          <div onClick={() => navigate("/cardDetail")}>
+            <TransactionCard
+              icon={data.icon}
+              type={data.type}
+              name={data.name}
+              detail={false}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 };

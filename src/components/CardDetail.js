@@ -19,6 +19,39 @@ const CardDetail = () => {
     from: { transform: "rotate(90deg)" },
   });
 
+  const cardDetailData = [
+    {
+      icon: share,
+      type: "Card to Card",
+      name: "Maria",
+    },
+    {
+      icon: music,
+      type: "Apply Music",
+      name: "Online",
+    },
+    {
+      icon: car,
+      type: "Uber",
+      name: "Service",
+    },
+    {
+      icon: share,
+      type: "Card to Card",
+      name: "Maria",
+    },
+    {
+      icon: music,
+      type: "Apply Music",
+      name: "Online",
+    },
+    {
+      icon: car,
+      type: "Uber",
+      name: "Service",
+    },
+  ];
+
   return (
     <div className={styles.cardDetail}>
       <div>
@@ -93,12 +126,18 @@ const CardDetail = () => {
           }}
         ></div>
         <h3 style={{ paddingTop: "2rem" }}>Today</h3>
-        <TransactionCard icon={share} type="Card to card" name="Maria" />
-        <TransactionCard icon={music} type="Apple Music" name="Online" />
-        <TransactionCard icon={car} type="Uber" name="Service" />
-        <TransactionCard icon={share} type="Card to card" name="Maria" />
-        <TransactionCard icon={music} type="Apple Music" name="Online" />
-        <TransactionCard icon={car} type="Uber" name="Service" />
+        {cardDetailData.map((data) => {
+          return (
+            <div>
+              <TransactionCard
+                icon={data.icon}
+                type={data.type}
+                name={data.name}
+                detail={true}
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );

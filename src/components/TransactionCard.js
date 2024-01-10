@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "../styles/transaction.module.css";
 
-const TransactionCard = ({ icon, type, name }) => {
+const TransactionCard = ({ icon, type, name, detail }) => {
   const [showInfo, setShowInfo] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ const TransactionCard = ({ icon, type, name }) => {
           <div>
             <p className={styles.transactionType}>{type}</p>
             <span>{name}</span>
-            {showInfo && (
+            {showInfo && detail && (
               <div className={styles.transaction}>
                 <span>xxxxxxxxxxx4586</span>
                 <span>21/09/2023 10:12 A.M.</span>
