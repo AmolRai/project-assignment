@@ -1,12 +1,37 @@
-import { useState } from "react";
 import styles from "../styles/home.module.css";
 import ellipse from "../assets/ellipse-one.svg";
 import firstCard from "../assets/card-one.svg";
 import secondCard from "../assets/card-two.svg";
 import { useNavigate } from "react-router-dom";
+import { useState, useRef } from "react";
 
 const Home = () => {
   const navigate = useNavigate();
+
+  const cardContainerRef = useRef(null);
+  const [direction, setDirection] = useState("left");
+
+  const handleScroll = (direction) => {
+    const container = cardContainerRef.current;
+
+    if (container) {
+      const cardWidth = container.offsetWidth;
+
+      if (direction === "left") {
+        setDirection("left");
+        container.scrollBy({
+          left: -cardWidth,
+          behavior: "smooth",
+        });
+      } else if (direction === "right") {
+        setDirection("right");
+        container.scrollBy({
+          left: cardWidth,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
 
   return (
     <div className={styles.home}>
@@ -21,13 +46,31 @@ const Home = () => {
             <img src={ellipse} />
           </div>
         </div>
-        <div className={styles.cards}>
-          <img
-            src={firstCard}
-            onClick={() => navigate("/cardDetail")}
-            style={{ marginRight: "1rem", cursor: "pointer" }}
-          />
-          <img src={secondCard} />
+        <div className={styles.card} ref={cardContainerRef}>
+          <div className={styles.cards}>
+            <img
+              src={firstCard}
+              onClick={() => navigate("/cardDetail")}
+              alt="First Card"
+            />
+          </div>
+          <div className={styles.cards}>
+            <img src={secondCard} alt="Second Card" />
+          </div>
+        </div>
+        <div className={styles.lines}>
+          <div
+            onClick={() => handleScroll("left")}
+            style={{
+              backgroundColor: direction === "left" ? "white" : "#2D3757",
+            }}
+          ></div>
+          <div
+            onClick={() => handleScroll("right")}
+            style={{
+              backgroundColor: direction === "right" ? "white" : "#2D3757",
+            }}
+          ></div>
         </div>
       </div>
     </div>

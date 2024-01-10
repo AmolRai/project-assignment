@@ -38,13 +38,38 @@
   letter-spacing: 0.3px;
 }
 
+.card {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 23rem;
+  margin: auto;
+  margin-top: 2rem;
+}
+
 .cards {
+  flex: 0 0 18rem;
+  scroll-snap-align: start;
+  margin-right: 1rem;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.lines {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2.5rem;
+  gap: 10px;
+  cursor: pointer;
 }
 
-.cards img {
-  width: 11rem;
+.lines div {
+  width: 30px;
+  height: 3.5px;
+  border-radius: 10px;
+  margin-top: 1rem;
 }
