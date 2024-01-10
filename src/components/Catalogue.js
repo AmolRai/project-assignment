@@ -85,13 +85,21 @@ const Catalogue = () => {
       </div>
       {catalogueItems.map((item) => {
         return (
-          <CatalogueCard
+          <div
             key={item.id}
-            icon={item.icon}
-            name={item.name}
-            debt={item.debt}
-            price={item.price}
-          />
+            style={{
+              display: "flex",
+              alignItems: "center",
+              // width: "100%",
+            }}
+          >
+            <CatalogueCard
+              icon={item.icon}
+              name={item.name}
+              debt={item.debt}
+              price={item.price}
+            />
+          </div>
         );
       })}
     </div>
