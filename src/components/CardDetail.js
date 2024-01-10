@@ -29,30 +29,20 @@ const CardDetail = () => {
         />
         <h1 style={{ marginLeft: "1.5rem" }}>Salary Card</h1>
         {cardClick && (
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
+          <div className={styles.cal}>
             <animated.img
               style={props}
               className={styles.card}
               src={card}
-              onClick={() => setCardClick(false)}
+              onClick={() => {
+                setCardClick(false);
+              }}
               alt="Back Credit Card Image"
             />
           </div>
         )}
         {!cardClick && (
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
+          <div className={styles.cal}>
             <img
               onClick={() => setCardClick(true)}
               className={styles.card}
