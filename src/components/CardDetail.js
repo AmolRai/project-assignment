@@ -8,10 +8,11 @@ import shareTwo from "../assets/share-two.svg";
 import backSideCard from "../assets/backSideCard.svg";
 import { useSpring, animated } from "react-spring";
 import { data } from "../utils/mockData";
+import { useNavigate } from "react-router-dom";
 
 const CardDetail = () => {
   const [cardClick, setCardClick] = useState(true);
-
+  const navigate = useNavigate();
   const props = useSpring({
     transform: "rotate(0deg)",
     from: { transform: "rotate(90deg)" },
@@ -24,7 +25,7 @@ const CardDetail = () => {
           style={{ marginLeft: "1.5rem" }}
           className={styles.arrow}
           src={arrow}
-          onClick={() => window.history.back()}
+          onClick={() => navigate("/")}
         />
         <h1 style={{ marginLeft: "1.5rem" }}>Salary Card</h1>
         {cardClick && (
